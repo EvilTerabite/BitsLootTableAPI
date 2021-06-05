@@ -1,17 +1,14 @@
-package me.evilterabite.bitsloottableapi.loottable.tables;
+# Loot Table API
 
-import me.evilterabite.bitsloottableapi.loottable.Entry;
-import me.evilterabite.bitsloottableapi.loottable.LootTable;
-import me.evilterabite.bitsloottableapi.loottable.Pool;
-import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
+## Introduction
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+> This API allows developers to create loot tables in classes easily, all you have to do is extend the LootTable class.
 
+## Code Samples
+
+> Sample Loot Table
+
+```java
 public class SampleLoot extends LootTable {
 
     @Override
@@ -52,4 +49,52 @@ public class SampleLoot extends LootTable {
 
         return new ArrayList<>(Arrays.asList(pool));
     }
-}
+```
+
+> Getting the loot from the table
+
+```java
+LootTable sampleLoot = new SampleLoot();
+ItemStack item = LootTable.getLoot(sampleLoot);
+```
+
+## Installation
+
+>Current version: 0.1a
+
+maven
+```
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+
+```
+	<dependency>
+	    <groupId>com.github.EvilTerabite</groupId>
+	    <artifactId>BitsLootTableAPI</artifactId>
+	    <version>VERSION</version>
+	</dependency>
+```
+
+gradle
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+```
+	dependencies {
+	        implementation 'com.github.EvilTerabite:BitsLootTableAPI:<VERSION>'
+	}
+```
+
+
+
