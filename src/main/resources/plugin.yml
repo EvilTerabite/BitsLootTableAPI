@@ -1,0 +1,10 @@
+name: BitsLootTableAPI
+version: ${project.version}
+main: me.evilterabite.bitsloottableapi.BitsLootTableAPI
+api-version: 1.16
+authors: [ evilterabite ]
+description: a loot table api to make custom tables easier for developers
+commands:
+  getLoot:
+    description: gets loot
+    usage: /getloot
